@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-rumped Vulture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Default background color for body */
+        }
+        .container {
+            padding: 20px;
+            height: max-content;
+            width: 90%;
+            margin: auto;
+            background-color: #fff; /* Default background color for container */
+            border-radius: 8px;
+        }
+        
+        .container:hover{
+            box-shadow: var(--box-shadow-color);
+            background-color: var(--container-hover-color); /* Hover background color for container */
+        }
+
+        h1, p {
+            text-align: center;
+            color: #333; /* Text color */
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            border-radius: 8px;
+            max-width: 75%;
+            max-height: 360px;
+        }
+        
+        img:hover{
+            box-shadow: var(--img-hover-color);
+        }
+
+        audio {
+            display: block;
+            margin: 20px auto;
+            position: relative;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>White-rumped Vulture</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/White-rumped_vulture_%28Gyps_bengalensis%29_Photograph_by_Shantanu_Kuveskar.jpg" alt="White-rumped Vulture">
+        <p>The White-rumped Vulture (Gyps bengalensis) is a critically endangered vulture species found in South Asia. It is characterized by its white rump, brownish body, and large wingspan. White-rumped Vultures play a crucial role in the ecosystem by scavenging carcasses and preventing the spread of diseases.</p>
+        <p>Population of White-rumped Vultures has declined rapidly due to factors such as habitat loss, poisoning from veterinary drugs, and reduction in food availability. Conservation efforts, including vulture-safe feeding sites and breeding programs, are underway to stabilize and increase their population.</p>
+        <audio controls>
+            <source src="./White-rumped Vulture.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        const birdName = "White-rumped Vulture";
+
+        // Set hover colors based on bird name
+        switch (birdName) {
+            case "White-rumped Vulture":
+                document.documentElement.style.setProperty('--box-shadow-color', '0 0 20px rgba(205, 176, 29, 0.557)');
+                document.documentElement.style.setProperty('--img-hover-color', '0 0 10px rgba(170, 255, 0, 0.507)');
+                document.documentElement.style.setProperty('--container-hover-color', '#f0f0f0'); /* Hover background color for container */
+                break;
+            // Add more cases for other bird names with respective hover colors
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
