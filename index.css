@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    border: 1px solid transparent;
+    /* padding: 10px 16px; */
+    height: 300px;
+    background-image: url("https://www.thayerbirding.com/wp-content/uploads/2022/07/rarest-bird-in-the-world.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    animation-name: colorchange;
+    animation-duration: 10s;
+}
+
+.hed{
+    margin-top: 100px;
+    text-shadow: 0 0 20px antiquewhite;
+    color: aqua;
+    text-align: center;
+    font-family: segoe print;
+    font-size: 30px;
+    animation-name: widthchange;
+    animation-duration: 15s;
+    position: relative;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    margin-top: 2px;
+    /* background-color: teal; */
+    background-color: rgb(121, 161, 56);
+    height: 50px;
+}
+
+
+
+li > a{
+    text-decoration: none;
+    text-decoration-style: none;
+    display: block;
+    float: left;
+    padding: 8px 16px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+
+}
+
+li >a:hover:not(.active){
+    background-color: black;
+    color: white;
+    text-shadow: 0 0 90px rgb(255, 255, 255);
+}
+
+.active{
+    background-color: red;
+    color: white;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* 
+#ind-p::first-letter{
+    padding-left: 150px;
+} */
+
+.divid{
+    border: 2px solid transparent;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.div2{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    background-color: lightblue;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Times New Roman';
+    font-size: 26px;
+    margin-left: 15px;
+    border: 2px solid transparent;
+}
+
+.div2:hover{
+    border: 2px solid #FC6736;
+    text-shadow: 0 0 20px yellow;
+    box-shadow: 0 0 20px black;
+    color: rgb(255, 255, 255);
+    background-color: #04364A;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* .fixed{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    color: red;
+    font-size: 20px;
+    background-color: #9DBC98;
+} */
+
+.fixed{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    color: red;
+    font-size: 20px;
+    background-color: #DED0B6;
+    border-radius: 15px;
+    border-width: thick;
+}
+
+marquee{
+    text-shadow: 0 0 15px blue;
+}
+
+
+.div2 > a:link{
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+
+.div2 > a{
+    color: whitesmoke; 
+}
+
+.div2 > a:hover{
+    
+    color: rgb(218, 162, 32); 
+}
+
+body{
+    background-color: #F2F1EB;
+}
+
+@keyframes widthchange{
+    0%{font-size: 60px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: red; }
+    10%{color: violet;}
+    20%{color: indigo;}
+    30%{color: blue;}
+    40%{color: green;}
+    50%{color: yellow;}
+    60%{color: orange;}
+    70%{color: red;}
+    100%{font-size: 30px;}
+}
+
+@keyframes colorchange{
+    0%{opacity: 0.7;}
+    /* 50%{opacity: 0.5;} */
+    100%{opacity: 1;}
+}
+
+
+
+
+footer {
+    background-color: #F2F1EB;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-container {
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.lastdiv{
+    background-color: #343a40;
+    height: 60px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 0;
+
+}
+
+.row{
+    padding-left: 10px;
+}
