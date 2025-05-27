@@ -513,67 +513,67 @@ footer.active::before {
     gap: 2rem;
     margin: 1.5rem 0;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 2rem;
-    width: 100%;
+    justify-content: flex-start;
 }
 
 .social-icons a {
     color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     font-size: 1.1rem;
-    line-height: 1;
-    padding: 0.25rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .social-icons a i {
-    font-size: 1.5rem;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .social-icons a:hover {
-    color: #f1c40f;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none !important;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for social icons */
 @media (max-width: 768px) {
     .social-icons {
-        gap: 1.5rem;
-        margin: 1rem 0;
         flex-wrap: wrap;
-        padding: 0.5rem 1rem;
+        gap: 1rem;
+        justify-content: center;
     }
     
     .social-icons a {
         font-size: 1rem;
-        gap: 0.5rem;
-        padding: 0.2rem 0;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .social-icons {
+        flex-direction: column;
+        align-items: flex-start;
     }
     
-    .social-icons a i {
-        font-size: 1.3rem;
-        width: 1.3rem;
-        height: 1.3rem;
+    .social-icons a {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 /* Section Headers */
 h1:not(.hed) {
     font-size: 2.8rem;
-    margin: 1rem 0 1rem;
+    margin: 1rem auto;
     text-align: center;
     color: #2c3e50;
     position: relative;
-    padding-bottom: 1rem;
+    padding: 0 1rem 1rem;
     font-weight: 700;
     letter-spacing: 1px;
     background: linear-gradient(120deg, #2c3e50, #3498db);
@@ -581,15 +581,13 @@ h1:not(.hed) {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: background 0.3s ease;
     cursor: default;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 h1:not(.hed):hover {
-    transform: translateX(-50%) scale(1.02);
     background: linear-gradient(120deg, #3498db, #2c3e50);
     -webkit-background-clip: text;
     background-clip: text;
@@ -715,8 +713,9 @@ h1:not(.hed):hover::after {
     }
     
     h1:not(.hed) {
-        font-size: 2rem;
-        margin: 2rem 0 1.5rem;
+        font-size: 2.2rem;
+        margin: 1.5rem auto;
+        padding: 0 1rem 1rem;
     }
     
     .bird-description {
@@ -771,7 +770,8 @@ h1:not(.hed):hover::after {
     
     h1:not(.hed) {
         font-size: 1.8rem;
-        margin: 1.5rem 0 1rem;
+        margin: 1.2rem auto;
+        padding: 0 0.8rem 1rem;
     }
     
     .bird-description {
@@ -804,7 +804,7 @@ h1:not(.hed):hover::after {
 
 @media (max-width: 400px) {
     .hed {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .div2 img {
@@ -813,6 +813,8 @@ h1:not(.hed):hover::after {
     
     h1:not(.hed) {
         font-size: 1.6rem;
+        margin: 1rem auto;
+        padding: 0 0.5rem 1rem;
     }
     
     .bird-description {
