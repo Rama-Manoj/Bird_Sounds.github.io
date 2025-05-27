@@ -581,17 +581,13 @@ h1:not(.hed) {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
     cursor: default;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
-}
-
-h1:not(.hed):hover {
-    background: linear-gradient(120deg, #3498db, #2c3e50);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    max-width: 100%;
 }
 
 h1:not(.hed)::after {
@@ -604,13 +600,67 @@ h1:not(.hed)::after {
     height: 4px;
     background: linear-gradient(90deg, #3498db, #2c3e50);
     border-radius: 2px;
-    transition: width 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-h1:not(.hed):hover::after {
-    width: 150px;
-    background: linear-gradient(90deg, #2c3e50, #3498db);
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+/* Desktop hover effects */
+@media (min-width: 769px) {
+    h1:not(.hed) {
+        transition: background 0.3s ease;
+    }
+
+    h1:not(.hed):hover {
+        background: linear-gradient(120deg, #3498db, #2c3e50);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h1:not(.hed)::after {
+        transition: width 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h1:not(.hed):hover::after {
+        width: 150px;
+        background: linear-gradient(90deg, #2c3e50, #3498db);
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    }
+}
+
+/* Update responsive styles for headings */
+@media (max-width: 768px) {
+    h1:not(.hed) {
+        font-size: 2rem;
+        margin: 1.5rem auto;
+        padding: 0 1rem 1rem;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 576px) {
+    h1:not(.hed) {
+        font-size: 1.6rem;
+        margin: 1.2rem auto;
+        padding: 0 0.8rem 1rem;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 400px) {
+    h1:not(.hed) {
+        font-size: 1.4rem;
+        margin: 1rem auto;
+        padding: 0 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
 }
 
 /* Enhanced Responsive Design */
@@ -713,9 +763,10 @@ h1:not(.hed):hover::after {
     }
     
     h1:not(.hed) {
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin: 1.5rem auto;
         padding: 0 1rem 1rem;
+        width: 100%;
     }
     
     .bird-description {
@@ -769,9 +820,10 @@ h1:not(.hed):hover::after {
     }
     
     h1:not(.hed) {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin: 1.2rem auto;
         padding: 0 0.8rem 1rem;
+        width: 100%;
     }
     
     .bird-description {
@@ -812,9 +864,10 @@ h1:not(.hed):hover::after {
     }
     
     h1:not(.hed) {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 1rem auto;
         padding: 0 0.5rem 1rem;
+        width: 100%;
     }
     
     .bird-description {
@@ -873,7 +926,7 @@ h1:not(.hed):hover::after {
     }
 
     h1:not(.hed):hover {
-        transform: translateX(-50%);
+        transform: none;
     }
 
     .social-icons a:hover {
